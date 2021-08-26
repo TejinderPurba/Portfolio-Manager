@@ -12,9 +12,11 @@ export class MarketMoversComponent implements OnInit {
   // we can declare data models for use within this component
   periodParamObj = 1
   response = {}
+  
   ngOnInit(): void {
     this.makeMarketMoversByPeriodCall()
   }
+
   makeMarketMoversCall() {
     // We call the service method by subscribing to the service call
     // Remember the api call with be async so subscribing responds when it returns

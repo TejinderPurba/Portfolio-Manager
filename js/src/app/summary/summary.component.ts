@@ -51,6 +51,13 @@ export class SummaryComponent implements OnInit {
     this.makeCashSummaryCall()
   }
 
+  refreshData() {
+    this.makeStockSummaryCall()
+    this.makeETFSummaryCall()
+    this.makeBondSummaryCall()
+    this.makeCashSummaryCall()
+  }
+
   makeStockSummaryCall() {
     // We call the service method by subscribing to the service call
     // Remember the api call with be async so subscribing responds when it returns
@@ -110,6 +117,7 @@ export class SummaryComponent implements OnInit {
     this.portfolioService.getStockDataBySymbol(this.stockParamObj)
       .subscribe( (data:any)=>{
         this.stockETFModalResponseData = data
+        console.log(this.stockETFModalResponseData)
     } )
   }
 

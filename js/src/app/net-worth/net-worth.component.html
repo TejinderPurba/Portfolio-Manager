@@ -1,31 +1,15 @@
 <section>
-  <!--
-      <nav class="navbar navbar-expand navbar-light bg-primary">
-    <div class="nav navbar-nav">
-    </div>
-  </nav>-->
-<!--   <div class="container-flid">
-   <div class="row pt-2">
-      <div class="col">
-        <div class="card text-left">
-          <div class="card-body">-->
-            <h4 class="card-title">Net Worth History</h4>
-            <ngx-charts-bar-vertical
-              [view]="[530,400]"
-              [results]= "networthResponseData"
-              [xAxisLabel]="'Date'"
-              [yAxisLabel]="'NetWorth value in $C'"
-              [showXAxisLabel]="true"
-              style="fill: #aaa"
-              [showYAxisLabel]="true"
-              [xAxis]="true"
-              [yAxis]="true"
-              >
-            </ngx-charts-bar-vertical>
-          <!--</div>
-        </div>
-      </div>
-    </div>
-  </div>-->
-
+  <h4 class="card-title">Net Worth History</h4>
+  <ngx-charts-bar-vertical
+    [view]="[530,400]"
+    [results]= "networthResponseData"
+    [xAxisLabel]="'Date'"
+    [yAxisLabel]="'Networth in $C'"
+    [showXAxisLabel]="true"
+    style="fill: #aaa"
+    [showYAxisLabel]="true"
+    [xAxis]="true"
+    [yAxis]="true"
+    >
+  </ngx-charts-bar-vertical>
 </section>

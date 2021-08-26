@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TypicodeService } from 'src/services/typicode.service';
 import { PortfolioService } from 'src/services/portfolio.service';
 
 @Component({
@@ -23,7 +22,7 @@ export class Investment2Component implements OnInit {
   incomeData= [ {name:'None', value:0.0} ]
   expenseData= [ {name:'None', value:0.0} ]
 
-  constructor(private typicodeService:TypicodeService, private PortfolioService:PortfolioService) { }
+  constructor(private PortfolioService:PortfolioService) { }
 
   ngOnInit(): void {
     console.log(this.paramCashFlowDate)

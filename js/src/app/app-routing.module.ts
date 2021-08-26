@@ -15,7 +15,7 @@ const routes: Routes = [
   {path:'networth', component:NetWorthComponent},
   {path:'summary', component:SummaryComponent},
   {path:'mynetworth', component:Investment2Component},
-  {path:'**', redirectTo: '/summary', pathMatch:'full'} // put this in only when the other routes work!
+  {path:'**', redirectTo: '/home', pathMatch:'full'} // put this in only when the other routes work!
 ];
 
 @NgModule({
