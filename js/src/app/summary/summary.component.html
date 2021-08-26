@@ -7,7 +7,7 @@
       <table  class="table table-striped table-responsive">
           <thead>
           <tr>
-            <th id="aligned-table" scope="col">ETF</th>
+            <th id="aligned-table" scope="col">Exchange Traded Funds</th>
             <th id="aligned-table" scope="col">{{ etfTotal |currency:'C$'}}</th>
           </tr>
           </thead>
@@ -24,14 +24,14 @@
       <table class="table table-striped table-responsive">
           <thead>
           <tr>
-            <th scope="col">Stocks</th>
-            <th scope="col">{{ stockTotal |currency:'C$'}}</th>
+            <th id="aligned-table" scope="col">Stocks</th>
+            <th id="aligned-table" scope="col">{{ stockTotal |currency:'C$'}}</th>
           </tr>
           </thead>
           <tbody>
           <tr *ngFor="let stock of stockResponseData">
-              <td> <a href="javascript:void(0);" (click)="openDetailsModal(investmentContentStocksETF, stock.symbol, 1)">{{ stock.name }}</a></td>
-              <td>{{ stock.totalValue |currency:'C$'}}</td>
+              <td id="aligned-table"> <a href="javascript:void(0);" (click)="openDetailsModal(investmentContentStocksETF, stock.symbol, 1)">{{ stock.name }}</a></td>
+              <td id="aligned-table">{{ stock.totalValue |currency:'C$'}}</td>
           </tr>
           </tbody>
       </table>
@@ -42,14 +42,14 @@
       <table class="table table-striped table-responsive">
           <thead>
             <tr>
-              <th scope="col">Cash Accounts</th>
-              <th scope="col">{{ cashTotal |currency:'C$'}}</th>
+              <th id="aligned-table" scope="col">Cash Accounts</th>
+              <th id="aligned-table" scope="col">{{ cashTotal |currency:'C$'}}</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let cash of cashResponseData">
-                <td> <a href="javascript:void(0);" (click)="openDetailsModal(cashContent, cash.accountNumber, 0)">{{ cash.financialInstitution }} {{ cash.accountNumber }}</a></td>
-                <td>{{ cash.balance |currency:'C$'}}</td>
+                <td id="aligned-table"> <a href="javascript:void(0);" (click)="openDetailsModal(cashContent, cash.accountNumber, 0)">{{ cash.financialInstitution }} {{ cash.accountNumber }}</a></td>
+                <td id="aligned-table">{{ cash.balance |currency:'C$'}}</td>
             </tr>
           </tbody>
       </table>
@@ -59,14 +59,14 @@
       <table class="table table-striped table-responsive">
           <thead>
           <tr>
-            <th scope="col">Bonds</th>
-            <th scope="col">{{ bondTotal |currency:'C$'}}</th>
+            <th id="aligned-table" scope="col">Bonds</th>
+            <th id="aligned-table" scope="col">{{ bondTotal |currency:'C$'}}</th>
           </tr>
           </thead>
           <tbody>
           <tr *ngFor="let bond of bondResponseData">
-              <td> <a href="javascript:void(0);" (click)="openDetailsModal(investmentContentBonds, bond.name, 3)">{{ bond.name }}</a></td>
-              <td>{{ bond.totalValue |currency:'C$'}}</td>
+              <td id="aligned-table"> <a href="javascript:void(0);" (click)="openDetailsModal(investmentContentBonds, bond.name, 3)">{{ bond.name }}</a></td>
+              <td id="aligned-table">{{ bond.totalValue |currency:'C$'}}</td>
           </tr>
           </tbody>
       </table>

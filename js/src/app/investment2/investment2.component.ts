@@ -73,13 +73,5 @@ makePortfolioServiceCall() {
           { name: "Broker", value: data[4]}
         ];
     } )
-
-    // ISNT WORKING RIGHT NOW, MIGHT BE DOING IT BEFORE THE HTTP RESPONSE COMES BACK AND THE VARS GET POPULATED?
-    for(let entry of this.incomeSeries) {
-      this.totalIncome += entry.value
-    }
-    for(let entry of this.expenseSeries) {
-      this.totalExpenses -= entry.value
-    }
   }
 }

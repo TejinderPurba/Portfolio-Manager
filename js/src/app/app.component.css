@@ -5,4 +5,7 @@ h1 {
 
   .ngx-charts text { fill: #fff; }
 
-  hr {background-color:aliceblue}
+  hr {
+    height: 2px;
+    background-color:aliceblue;
+  }
