@@ -1,8 +1,8 @@
+<h3>Market Movers</h3>
 <form>
   <input placeholder='Number of Days' id="period" type="text" class="form-control" [(ngModel)]='periodParamObj' name='period' min = "1"/>
   <label for="period">Analysis Period in Days</label>
   <br/>
-  <hr/>
   <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic">
     <label ngbButtonLabel class="btn-primary">
       <input ngbButton type="radio" (click)='makeMarketMoversByPeriodCall()'> Refresh
@@ -13,7 +13,7 @@
   <thead>
   <tr>
     <th scope="col">Symbols</th>
-    <th scope="col">Gainers & Losers</th>
+    <th scope="col">Values</th>
   </tr>
   </thead>
   <tbody>
