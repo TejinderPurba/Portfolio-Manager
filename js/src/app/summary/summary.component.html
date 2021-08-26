@@ -1,69 +1,77 @@
-<button type="button" class="btn btn-primary btn-block" (click)="openTransactionModal(transactionManager)" >
+<button type="button" id="btncolor" class="btn btn-outline-primary btn-block" (click)="openTransactionModal(transactionManager)" >
     Transaction Manager
 </button>
 <hr/>
-<table class="table table-striped table-responsive">
-    <thead>
-    <tr>
-      <th scope="col">Cash Accounts</th>
-      <th scope="col">{{ cashTotal |currency:'C$'}}</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let cash of cashResponseData">
-        <td> <a href="javascript:void(0);" (click)="openDetailsModal(cashContent, cash.accountNumber, 0)">{{ cash.financialInstitution }} {{ cash.accountNumber }}</a></td>
-        <td>{{ cash.balance |currency:'C$'}}</td>
-    </tr>
-    </tbody>
-</table>
+<div class="row">
+  <div class="col">
+      <table  class="table table-striped table-responsive">
+          <thead>
+          <tr>
+            <th id="aligned-table" scope="col">ETF</th>
+            <th id="aligned-table" scope="col">{{ etfTotal |currency:'C$'}}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let etf of etfResponseData">
+              <td id="aligned-table">  <a href="javascript:void(0);" (click)="openDetailsModal(investmentContentStocksETF, etf.symbol, 2)">{{ etf.name }}</a></td>
+              <td id="aligned-table">{{ etf.totalValue |currency:'C$'}}</td>
+          </tr>
+          </tbody>
+      </table>
 
-<table class="table table-striped table-responsive">
-    <thead>
-    <tr>
-      <th scope="col">Stocks</th>
-      <th scope="col">{{ stockTotal |currency:'C$'}}</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let stock of stockResponseData">
-        <td> <a href="javascript:void(0);" (click)="openDetailsModal(investmentContentStocksETF, stock.symbol, 1)">{{ stock.name }}</a></td>
-        <td>{{ stock.totalValue |currency:'C$'}}</td>
-    </tr>
-    </tbody>
-</table>
+  </div>
+  <div class="col">
+      <table class="table table-striped table-responsive">
+          <thead>
+          <tr>
+            <th scope="col">Stocks</th>
+            <th scope="col">{{ stockTotal |currency:'C$'}}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let stock of stockResponseData">
+              <td> <a href="javascript:void(0);" (click)="openDetailsModal(investmentContentStocksETF, stock.symbol, 1)">{{ stock.name }}</a></td>
+              <td>{{ stock.totalValue |currency:'C$'}}</td>
+          </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table table-striped table-responsive">
+          <thead>
+            <tr>
+              <th scope="col">Cash Accounts</th>
+              <th scope="col">{{ cashTotal |currency:'C$'}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cash of cashResponseData">
+                <td> <a href="javascript:void(0);" (click)="openDetailsModal(cashContent, cash.accountNumber, 0)">{{ cash.financialInstitution }} {{ cash.accountNumber }}</a></td>
+                <td>{{ cash.balance |currency:'C$'}}</td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+    <div class="col">
 
-
-<table class="table table-striped table-responsive">
-    <thead>
-    <tr>
-      <th scope="col">Exchange Traded Funds</th>
-      <th scope="col">{{ etfTotal |currency:'C$'}}</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let etf of etfResponseData">
-        <td> <a href="javascript:void(0);" (click)="openDetailsModal(investmentContentStocksETF, etf.symbol, 2)">{{ etf.name }}</a></td>
-        <td>{{ etf.totalValue |currency:'C$'}}</td>
-    </tr>
-    </tbody>
-</table>
-
-
-<table class="table table-striped table-responsive">
-    <thead>
-    <tr>
-      <th scope="col">Bonds</th>
-      <th scope="col">{{ bondTotal |currency:'C$'}}</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let bond of bondResponseData">
-        <td> <a href="javascript:void(0);" (click)="openDetailsModal(investmentContentBonds, bond.name, 3)">{{ bond.name }}</a></td>
-        <td>{{ bond.totalValue |currency:'C$'}}</td>
-    </tr>
-    </tbody>
-</table>
-
+      <table class="table table-striped table-responsive">
+          <thead>
+          <tr>
+            <th scope="col">Bonds</th>
+            <th scope="col">{{ bondTotal |currency:'C$'}}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let bond of bondResponseData">
+              <td> <a href="javascript:void(0);" (click)="openDetailsModal(investmentContentBonds, bond.name, 3)">{{ bond.name }}</a></td>
+              <td>{{ bond.totalValue |currency:'C$'}}</td>
+          </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
 <ng-template #investmentContentStocksETF let-modal>
     <div class="modal-header">
       <h4 class="modal-title">{{ currentModalTitle }}</h4>

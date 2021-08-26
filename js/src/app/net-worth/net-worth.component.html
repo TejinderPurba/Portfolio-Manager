@@ -1,29 +1,31 @@
 <section>
-  <nav class="navbar navbar-expand navbar-light bg-primary">
+  <!--
+      <nav class="navbar navbar-expand navbar-light bg-primary">
     <div class="nav navbar-nav">
     </div>
-  </nav>
-  <div class="container-fluid">
-    <div class="row pt-2">
-      <div class="col-md-12">
+  </nav>-->
+<!--   <div class="container-flid">
+   <div class="row pt-2">
+      <div class="col">
         <div class="card text-left">
-          <div class="card-body">
-            <h4 class="card-title border-bottom">Net Worth</h4>
+          <div class="card-body">-->
+            <h4 class="card-title">Net Worth History</h4>
             <ngx-charts-bar-vertical
-              [view]="[500,250]"
+              [view]="[530,400]"
               [results]= "networthResponseData"
               [xAxisLabel]="'Date'"
               [yAxisLabel]="'NetWorth value in $C'"
               [showXAxisLabel]="true"
+              style="fill: #aaa"
               [showYAxisLabel]="true"
               [xAxis]="true"
               [yAxis]="true"
               >
             </ngx-charts-bar-vertical>
-          </div>
+          <!--</div>
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
 
 </section>

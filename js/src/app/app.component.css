@@ -2,3 +2,7 @@ h1 {
     color: #ccc;
     text-align: center;
   }
+
+  .ngx-charts text { fill: #fff; }
+
+  hr {background-color:aliceblue}

@@ -26,6 +26,7 @@
   </nav>
   <h1>Portfolio Manager</h1>
   <br/>
+  <!--
   <ng-container *ngIf='askCookieConsent'>
     <ngb-alert [dismissible]="false" type="info">This site uses cookies, is that ok?
       <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic">
@@ -35,17 +36,22 @@
       </div>
     </ngb-alert>
   </ng-container>
+-->
 
   <div class="row">
-    <div class="col">
+    <div class="col-8">
+        <app-investment2></app-investment2>
+    </div>
+    <div class="col-4">
+      <app-net-worth></app-net-worth>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-8">
       <app-summary></app-summary>
     </div>
     <!-- try -md-auto when the charts are there-->
-    <div class="col-6">
-      <app-net-worth></app-net-worth>
-        <app-investment2></app-investment2>
-    </div>
-    <div class="col">
+    <div class="col-4">
       <app-market-movers></app-market-movers>
     </div>
   </div>

@@ -19,11 +19,17 @@
   td {
     white-space:nowrap;
   }
-  th:last-child{
+  #aligned-table:last-child{
     text-align: right;
   }
-  td:last-child {
+  #aligned-table:last-child {
     width:100%;
     text-align: right;
   }
-  
+  td{
+    width:100%;
+  }
+  #btncolor{
+    border:2px solid #4e6096;
+    border-radius: 13px;
+  }
